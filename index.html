@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Food World</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100 min-h-screen flex flex-col items-center px-4 py-10">
+    <!-- Title Section -->
+    <div class="text-center mb-8">
+      <h1 class="text-5xl font-extrabold text-fuchsia-600 drop-shadow-md mb-2">
+        🍽️ The Food World
+      </h1>
+      <p class="text-gray-600 text-lg">Search meals by country</p>
+    </div>
+
+    <!-- Input Section -->
+    <div class="w-full max-w-xl bg-white rounded-xl shadow-md p-6">
+      <label for="input" class="block text-xl text-green-600 mb-2 text-center">
+        Get food list based on Country
+      </label>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <input
+          type="text"
+          id="input"
+          placeholder="Enter country name"
+          class="flex-1 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        <button
+          onclick="showfoodCard()"
+          class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Display Area -->
+    <div
+      id="displayArea"
+      class="mt-10 w-full max-w-6xl grid place-items-center sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
+    >
+      <!-- Meal cards will be injected here -->
+    </div>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
